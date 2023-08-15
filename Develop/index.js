@@ -2,6 +2,18 @@
 //Installed "npm install inquirer"
 const fs = require('fs');
 const inquirer = require("inquirer");
+const licenses = [
+    "MIT License", 
+    "Apache License 2.0", 
+    "GNU General Public License (GPL) v3", 
+    "GNU Lesser General Public License (LGPL) v3", 
+    "BSD 2-Clause License (Simplified BSD License)", 
+    "BSD 3-Clause License (Modified BSD License)", 
+    "Mozilla Public License 2.0", 
+    "Creative Commons CC0", 
+    "Unlicense", 
+    "Eclipse Public License 2.0"
+]
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -30,6 +42,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+
 }
 
 // TODO: Create a function to initialize app
