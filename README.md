@@ -43,7 +43,7 @@ Terminal input example:
 
 README Generator Example: 
 
-  ![a](./generator_example.jpg)
+![a](./generator_example.jpg)
 
 ## Credits
 Github user: s0m3y3
