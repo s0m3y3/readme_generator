@@ -18,32 +18,32 @@ const questions = [
     {
         type:"input",
         name:"user",
-        question: "What is your GitHub username?"
+        message: "What is your GitHub username?"
     },
     {
         type: "input",
         name: "title",
-        question: "What is the title of your project?",
+        message: "What is the title of your project?",
     },
     {
         type: "input",
         name: "description",
-        question: "Please enter a description of your project.",
+        message: "Please enter a description of your project.",
     },
     {
         type: "input",
         name: "installation",
-        question: "What are the steps required to install your project?",
+        message: "What are the steps required to install your project?",
     },
     {
         type: "input",
         name: "usage",
-        question: "Provide instructions and examples for use."
+        message: "Provide instructions and examples for use."
     },
     {
-        type: "input",
+        type: "list",
         name: "license",
-        question: "Which license will be assign for this project?",
+        message: "Which license will be assign for this project?",
         choices: licenses,
     },
     {
