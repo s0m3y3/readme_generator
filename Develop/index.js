@@ -8,11 +8,9 @@ const licenses = [
     "GNU General Public License (GPL) v3", 
     "GNU Lesser General Public License (LGPL) v3", 
     "BSD 2-Clause License (Simplified BSD License)", 
-    "BSD 3-Clause License (Modified BSD License)", 
     "Mozilla Public License 2.0", 
-    "Creative Commons CC0", 
+    "Boost Software License 1.0",
     "Unlicense", 
-    "Eclipse Public License 2.0"
 ]
 
 //Array of questions for user input
