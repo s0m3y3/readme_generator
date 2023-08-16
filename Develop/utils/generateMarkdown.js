@@ -4,7 +4,7 @@ let currentYear = new Date().getFullYear();
 //NOTE: as of 08/15/2023, it appears https://opensource.org/ may be outdated.
 
 //program to add data.user
-const licenses = {
+const listLiscenses = {
   "MIT": {
     badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
     Link: "https://spdx.org/licenses/MIT.html",
@@ -1548,19 +1548,28 @@ Library.
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-
-}
+  if(listLiscenses[license]){
+    return 'listLiscenses[license].badge'
+  }
+  else{return "";}
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-
+  if(listLiscenses[license]){
+    return 'listLiscenses[license].Link'
+  }
+  else{return "";}
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-
+  if(listLiscenses[license]){
+    return 'listLiscenses[license].Section'
+  }
+  else{return "";}
 }
 
 // TODO: Create a function to generate markdown for README
