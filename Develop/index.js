@@ -74,12 +74,26 @@ function writeToFile(fileName, data) {
     - [Tests](#tests)
     - [Questions](#questions)
     
+    ## Description
     ${data.description}
+
+    ## Installation
     ${data.installation}
+
+    ## Usage
     ${data.usage}
+
+    ## License
     ${data.license}
-    ${data.contributing}
+
+    ## Contributions
+    ${data.contributors}
+
+    ## Tests
     ${data.tests}
+
+    ## Questions
+    If you have any questions, please contact: \n
     ${data.questions}
     `, 
     err => {if(err){console.error(err); return}} 
