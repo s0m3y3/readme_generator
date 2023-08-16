@@ -18,27 +18,27 @@ const licenses = [
 //Array of questions for user input
 const questions = [
     {
-        type: input,
+        type: "input",
         name: "title",
         question: "What is the title of your project?",
     },
     {
-        type: input,
+        type: "input",
         name: "description",
         question: "Please enter a description of your project.",
     },
     {
-        type: input,
+        type: "input",
         name: "installation",
         question: "What are the steps required to install your project?",
     },
     {
-        type: input,
+        type: "input",
         name: "usage",
         question: "Provide instructions and examples for use."
     },
     {
-        type: input,
+        type: "input",
         name: "license",
         question: "Which license will be assign for this project?",
         choices: licenses,
@@ -62,14 +62,13 @@ const questions = [
 
 //function that writes to README0.md file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName,data,err => {if(err){console.error(err); return}} 
-    )
+    fs.writeFile(fileName,data,err => {if(err){console.error(err); return}})
 }
 
 //function to initialize app
 function init() {
     inquirer.prompt(questions).then(function (data) {
-        writeToFile("README0.md", data);
+        writeToFile("README0.md", generateMarkdown(data));
     });
 }
 
