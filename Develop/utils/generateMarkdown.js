@@ -1546,29 +1546,26 @@ Library.
   },
 };
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+//function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if(listLiscenses.hasOwnProperty(license)){
-    return 'listLiscenses.license.badge'
+    return listLiscenses[license].badge
   }
   else{return "";}
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+//function that returns the license link
 function renderLicenseLink(license) {
-  if(listLiscenses.hasOwnProperty(license)){
-    return 'listLiscenses.license.Link'
-  }
-  else{return "";}
+  if (listLiscenses.hasOwnProperty(license)) {
+    return listLiscenses[license].Link;
+  } 
+  else {return "";}
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+//function that returns the license section of README
 function renderLicenseSection(license) {
   if(listLiscenses.hasOwnProperty(license)){
-    return 'listLiscenses.license.Section'
+    return listLiscenses[license].Section
   }
   else{return "";}
 }
@@ -1602,7 +1599,8 @@ function generateMarkdown(data) {
 
   ## License
   ${renderLicenseBadge(data.license)}
-  ${renderLicenseLink(data.license)}
+
+  Link: ${renderLicenseLink(data.license)}
 
   ${renderLicenseSection(data.license)}
 
