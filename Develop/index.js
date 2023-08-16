@@ -1,5 +1,7 @@
 const fs = require('fs');
 const inquirer = require("inquirer");
+const generateMarkdown = require('./utils/generateMarkdown');
+
 const licenses = [
     "MIT License", 
     "Apache License 2.0", 
@@ -45,7 +47,7 @@ const questions = [
         type: "input",
         name: "contributors",
         message: "Who else contributed to the project?",
-    }
+    },
     {
         type: "input",
         name: "tests",
@@ -60,43 +62,7 @@ const questions = [
 
 //function that writes to README0.md file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName,
-    `
-    # ${data.title}
-
-    ## Table of Contents
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
-    - [Contributions](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
-    
-    ## Description
-    ${data.description}
-
-    ## Installation
-    ${data.installation}
-
-    ## Usage
-    ${data.usage}
-
-    ## License
-    ${data.license}
-
-    ## Contributions
-    ${data.contributors}
-
-    ## Tests
-    ${data.tests}
-
-    ## Questions
-    If you have any questions, please contact: \n
-    ${data.questions}
-    `, 
-    err => {if(err){console.error(err); return}} 
+    fs.writeFile(fileName,data,err => {if(err){console.error(err); return}} 
     )
 }
 
