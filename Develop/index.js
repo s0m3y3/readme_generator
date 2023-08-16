@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const generateMarkdown = require('./utils/generateMarkdown');
 
 const licenses = [
-    "MIT License", 
+    "MIT", 
     "Apache License 2.0", 
     "GNU General Public License (GPL) v3", 
     "GNU Lesser General Public License (LGPL) v3", 
