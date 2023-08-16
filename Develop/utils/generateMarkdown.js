@@ -1,4 +1,5 @@
 let currentYear = new Date().getFullYear();
+let user = "";
 //Source of badge link: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 //Source of Licenses: https://choosealicense.com/licenses/
 //NOTE: as of 08/15/2023, it appears https://opensource.org/ may be outdated.
@@ -894,7 +895,7 @@ Also add information on how to contact you by electronic and paper mail.
 If the program does terminal interaction, make it output a short
 notice like this when it starts in an interactive mode:
 
-${title}  Copyright (C) ${currentYear}  ${user}
+Copyright (C) ${currentYear}  ${user}
 This program comes with ABSOLUTELY NO WARRANTY; for details type "show w'.
 This is free software, and you are welcome to redistribute it
 under certain conditions; type "show c' for details.
@@ -1548,8 +1549,8 @@ Library.
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if(listLiscenses[license]){
-    return 'listLiscenses[license].badge'
+  if(listLiscenses.hasOwnProperty(license)){
+    return 'listLiscenses.license.badge'
   }
   else{return "";}
 };
@@ -1557,8 +1558,8 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if(listLiscenses[license]){
-    return 'listLiscenses[license].Link'
+  if(listLiscenses.hasOwnProperty(license)){
+    return 'listLiscenses.license.Link'
   }
   else{return "";}
 }
@@ -1566,8 +1567,8 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if(listLiscenses[license]){
-    return 'listLiscenses[license].Section'
+  if(listLiscenses.hasOwnProperty(license)){
+    return 'listLiscenses.license.Section'
   }
   else{return "";}
 }
@@ -1575,7 +1576,7 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
-  let user = data.user;
+  user = data.user;
   let title = data.title;
   return `
   # ${title}

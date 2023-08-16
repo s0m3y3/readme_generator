@@ -16,6 +16,11 @@ const licenses = [
 //Array of questions for user input
 const questions = [
     {
+        type:"input",
+        name:"user",
+        question: "What is your GitHub username?"
+    },
+    {
         type: "input",
         name: "title",
         question: "What is the title of your project?",
